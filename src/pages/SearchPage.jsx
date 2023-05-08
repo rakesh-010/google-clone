@@ -18,7 +18,7 @@ function SearchPage() {
   window.addEventListener('searchItem', () => {
     setSearchItem(localStorage.getItem('searchItem'));
   })
-    console.log(searchItem);
+    // console.log(searchItem);
     const {data}=useGoogleSearch(searchItem); //LIVE API CALL
   // const data = response;
 //   console.log(data.items);

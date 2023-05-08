@@ -13,6 +13,7 @@ const useGoogleSearch=(term)=> {
             res.json()//local storage ko khali karna hai baad mai
             .then(result=>{
                 setData(result);
+                localStorage.setItem('searchItem',null);
             })
         })
     }

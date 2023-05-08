@@ -12,12 +12,15 @@ import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 
 function SearchPage() {
-  // <input type="text" value={input} onChange={handleOnChange}/>
-  // <button onClick={search}>ajv</button>
 
-    const [searchItem]=useState(localStorage.getItem('searchItem'));
+  const [searchItem,setSearchItem]=useState(localStorage.getItem('searchItem'));
+
+  window.addEventListener('searchItem', () => {
+    setSearchItem(localStorage.getItem('searchItem'));
+  })
+    console.log(searchItem);
     const {data}=useGoogleSearch(searchItem); //LIVE API CALL
-//   const data = response;
+  // const data = response;
 //   console.log(data.items);
 
   return (

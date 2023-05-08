@@ -11,8 +11,8 @@
 # production
 /build
 
-/keys
-/response
+keys
+response
 
 # misc
 .DS_Store
